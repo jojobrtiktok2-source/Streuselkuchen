@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="es-419">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="90 Recetas de Streuselkuchen de la Chef Luana y una súper oferta con 165 recetas alemanas más y cinco bonos." />
+    <meta property="og:title" content="90 Recetas de Streuselkuchen | Chef Luana" />
+    <meta property="og:description" content="Recetas alemanas esponjosas, crujientes e irresistibles para preparar en casa." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_LA" />
+    <meta property="og:image" content="/streuselkuchen/mockup-basico.png" />
+    <link rel="alternate" hreflang="pt-BR" href="/" />
+    <link rel="alternate" hreflang="es-419" href="/es/" />
+    <link rel="preconnect" href="https://cdn.utmify.com.br" crossorigin />
+    <link rel="preload" as="image" href="../streuselkuchen/banner-desktop.webp" type="image/webp" fetchpriority="high" />
+    <title>90 Recetas de Streuselkuchen | Chef Luana</title>
+
+    <!-- UTMify (mismo píxel de la página en portugués) -->
+    <script>window.pixelId = "6ac17d59901897dad31db5f2";</script>
+    <script src="https://cdn.utmify.com.br/scripts/pixel/pixel.js" async defer></script>
+    <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids async defer></script>
+
+    <link rel="stylesheet" href="../styles.css" />
+    <style>
+      [hidden]{display:none!important}
+      .local-price{margin:6px auto 0;padding:4px 10px;border-radius:999px;background:#fbf1ea;color:#6c5042;font-size:13px;font-weight:700;line-height:1.3;text-align:center;width:fit-content;max-width:100%}
+      .local-price b{color:#7c3719;font-weight:900}
+      .lc-plan-bottom .local-price{margin:-4px auto 10px}
+    </style>
+  </head>
+  <body data-assets="../streuselkuchen/">
+    <div id="root">
+      <main class="lc-page bolos-page streusel-page">
+        <div class="lc-promo">ESTA OFERTA ESPECIAL ESTÁ DISPONIBLE HOY<span id="promo-date"></span></div>
+
+        <!-- HERO -->
+        <section class="lc-hero lc-shell">
+          <h1>90 RECETAS DE STREUSELKUCHEN</h1>
+          <h2>Recetas alemanas esponjosas, crujientes e irresistibles para hacer tu café aún más especial.</h2>
+          <p>Descubre combinaciones con frutas, cremas y chocolate, siempre con ese crumble dorado que a todos les encanta.</p>
+          <div class="bolos-hero-art">
+            <img class="lc-hero-img" src="../streuselkuchen/banner-desktop.webp" alt="Chef Luana con el libro 90 Recetas de Streuselkuchen y pasteles alemanes sobre la mesa" width="1536" height="1024" fetchpriority="high" />
+          </div>
+          <div class="lc-hero-price">
+            <span>Antes <span data-usd="58">US$&nbsp;58.00</span></span>
+            <small>POR SOLO</small>
+            <strong data-usd="6">US$&nbsp;6.00</strong>
+            <p class="local-price" data-local="6" hidden></p>
+          </div>
+          <a class="lc-cta" href="#ofertas">QUIERO LAS 90 RECETAS</a>
+          <p class="lc-micro">Compra 100% segura • 15 días de garantía • Acceso inmediato</p>
+        </section>
+
+        <!-- BENEFICIOS -->
+        <section class="lc-benefits lc-shell">
+          <h2 class="lc-heading">TRADICIÓN ALEMANA PARA <em>HACER EN CASA</em></h2>
+          <div class="lc-benefit-grid">
+            <div class="lc-benefit"><span aria-hidden="true">🍰</span><strong>90 recetas de Streuselkuchen</strong></div>
+            <div class="lc-benefit"><span aria-hidden="true">🍎</span><strong>Versiones con frutas y cremas</strong></div>
+            <div class="lc-benefit"><span aria-hidden="true">✨</span><strong>Crumble dorado y crujiente</strong></div>
+            <div class="lc-benefit"><span aria-hidden="true">🥣</span><strong>Masas esponjosas y bien explicadas</strong></div>
+            <div class="lc-benefit"><span aria-hidden="true">🇩🇪</span><strong>Tradición alemana en tu cocina</strong></div>
+            <div class="lc-benefit"><span aria-hidden="true">☕</span><strong>Perfectas para la hora del café</strong></div>
+            <div class="lc-benefit"><span aria-hidden="true">📖</span><strong>Variedad para salir de lo común</strong></div>
+            <div class="lc-benefit"><span aria-hidden="true">📱</span><strong>Libro digital para consultar siempre</strong></div>
+          </div>
+        </section>
+
+        <!-- GALERÍA -->
+        <section class="lc-gallery">
+          <div class="lc-gallery-intro">
+            <h2 class="lc-heading">MIRA LO QUE VAS A <em>APRENDER A HACER</em></h2>
+            <p>Toca una página para ampliarla y conocer la receta.</p>
+          </div>
+          <div class="lc-gallery-scroll" id="gallery-scroll" aria-label="Seis páginas de recetas"></div>
+          <div class="lc-gallery-swipe" aria-hidden="true">DESLIZA PARA VER MÁS <span>›</span></div>
+          <div class="lc-gallery-grid" id="gallery-grid"></div>
+          <div class="lc-carousel-controls">
+            <button id="gallery-prev" aria-label="Ver recetas anteriores">‹</button>
+            <button id="gallery-next" aria-label="Ver siguientes recetas">›</button>
+          </div>
+        </section>
+
+        <!-- MODAL DE LA RECETA -->
+        <div class="bolos-modal-backdrop" id="recipe-modal" hidden>
+          <dialog open class="bolos-modal bolos-recipe-modal" aria-label="">
+            <button id="recipe-modal-close" aria-label="Cerrar">×</button>
+            <img id="recipe-modal-img" alt="" />
+          </dialog>
+        </div>
+
+        <!-- TESTIMONIOS (WHATSAPP) -->
+        <section class="lc-testimonials lc-shell">
+          <h2 class="lc-heading">CONVERSACIONES SOBRE LOS <em>STREUSELKUCHEN</em></h2>
+          <div class="lc-carousel-controls lc-chat-controls">
+            <button id="chat-prev" aria-label="Ver testimonio anterior">‹</button>
+            <button id="chat-next" aria-label="Ver siguiente testimonio">›</button>
+          </div>
+          <div class="lc-chat-scroll" id="chat-scroll" aria-label="Cinco testimonios reales en conversaciones de WhatsApp"></div>
+          <div class="lc-chat-swipe" aria-hidden="true">DESLIZA PARA VER MÁS <span>›</span></div>
+          <div class="lc-chat-dots" id="chat-dots" aria-label="Elegir testimonio"></div>
+          <a class="lc-cta" href="#ofertas">QUIERO CONOCER LAS OFERTAS</a>
+        </section>
+
+        <!-- PARA QUIÉN ES -->
+        <section class="lc-for">
+          <div class="lc-shell">
+            <h2 class="lc-heading">ESTE LIBRO ES PARA <em>TI QUE…</em></h2>
+            <div class="lc-for-list">
+              <p><span aria-hidden="true">✓</span>Amas los pasteles caseros con cobertura crujiente.</p>
+              <p><span aria-hidden="true">✓</span>Quieres conocer los sabores de la repostería alemana.</p>
+              <p><span aria-hidden="true">✓</span>Te gusta variar los rellenos con frutas, cremas y chocolate.</p>
+              <p><span aria-hidden="true">✓</span>Buscas recetas especiales para la hora del café y las reuniones familiares.</p>
+              <p><span aria-hidden="true">✓</span>Quieres un paso a paso fácil de seguir.</p>
+              <p><span aria-hidden="true">✓</span>Prefieres tener muchas opciones reunidas en un solo material.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- BONOS -->
+        <section class="lc-bonuses lc-shell">
+          <h2 class="lc-heading">EN LA SÚPER OFERTA, TE LLEVAS <em>5 BONOS</em></h2>
+          <p>Guías complementarias para lograr el crumble perfecto, variar los sabores y conservar tus recetas.</p>
+          <div class="lc-bonus-list" id="bonus-list"></div>
+        </section>
+
+        <!-- OFERTAS -->
+        <section class="lc-offers" id="ofertas">
+          <div class="lc-shell">
+            <h2 class="lc-heading">ELIGE TU <em>OFERTA</em></h2>
+            <p>Llévate las 90 recetas de Streuselkuchen o elige la colección completa con +165 recetas alemanas y cinco bonos.</p>
+            <div class="lc-offer-list">
+              <article class="lc-plan lc-plan-featured">
+                <span class="lc-plan-recommended">MÁS RECOMENDADO</span>
+                <span class="lc-plan-badge">SÚPER OFERTA</span>
+                <h3>+165 Recetas Alemanas + 90 Recetas de Streuselkuchen</h3>
+                <ul id="plan-complete-list">
+                  <li class="lc-plan-item"><span aria-hidden="true">✓</span>90 recetas de Streuselkuchen</li>
+                  <li class="lc-plan-item"><span aria-hidden="true">✓</span>+165 recetas alemanas</li>
+                  <li class="lc-plan-item"><span aria-hidden="true">✓</span>255 recetas en total</li>
+                  <li class="lc-plan-item"><span aria-hidden="true">✓</span>Los cinco bonos presentados arriba</li>
+                </ul>
+                <div class="lc-plan-bottom">
+                  <p class="lc-plan-reference">Antes <del data-usd="93">US$&nbsp;93.00</del> <span aria-hidden="true">•</span> PAGO ÚNICO</p>
+                  <p class="lc-plan-price" data-usd="9.9">US$&nbsp;9.90</p>
+                  <p class="local-price" data-local="9.9" hidden></p>
+                  <a class="lc-buy" href="https://pay.wiapy.com/VadJPLmciF0t">🛒 COMPRAR AHORA</a>
+                  <small class="lc-plan-assurances"><span>♧ PRODUCTO DIGITAL</span><span>◷ ACCESO DESPUÉS DE LA COMPRA</span></small>
+                </div>
+              </article>
+              <article class="lc-plan">
+                <span class="lc-plan-badge">OFERTA BÁSICA</span>
+                <img class="streusel-plan-mockup" src="../streuselkuchen/mockup-basico.png" alt="Libro 90 Recetas de Streuselkuchen" loading="lazy" />
+                <h3>90 Recetas de Streuselkuchen</h3>
+                <ul>
+                  <li class="lc-plan-item"><span aria-hidden="true">✓</span>90 recetas de Streuselkuchen</li>
+                  <li class="lc-plan-item"><span aria-hidden="true">✓</span>Variaciones con frutas, cremas y chocolate</li>
+                  <li class="lc-plan-item"><span aria-hidden="true">✓</span>Ingredientes y preparación paso a paso</li>
+                  <li class="lc-plan-item"><span aria-hidden="true">✓</span>Libro digital para consultar siempre</li>
+                </ul>
+                <div class="lc-plan-bottom">
+                  <p class="lc-plan-reference">Antes <del data-usd="58">US$&nbsp;58.00</del> <span aria-hidden="true">•</span> PAGO ÚNICO</p>
+                  <p class="lc-plan-price" data-usd="6">US$&nbsp;6.00</p>
+                  <p class="local-price" data-local="6" hidden></p>
+                  <a class="lc-buy" href="https://pay.wiapy.com/NR2hu_GfSe7T">🛒 COMPRAR AHORA</a>
+                  <small class="lc-plan-assurances"><span>♧ PRODUCTO DIGITAL</span><span>◷ ACCESO DESPUÉS DE LA COMPRA</span></small>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- GARANTÍA -->
+        <section class="lc-guarantee">
+          <div class="lc-shell">
+            <div class="lc-shield" aria-hidden="true">♧</div>
+            <h2>CONOCE LAS RECETAS CON TRANQUILIDAD</h2>
+            <h3>15 DÍAS DE GARANTÍA</h3>
+            <p>Accede al material y comprueba si encaja con tu rutina. Si no quedas satisfecha, solicita el reembolso dentro de los 15 días, según las condiciones de la compra.</p>
+          </div>
+        </section>
+
+        <!-- RESEÑAS -->
+        <section class="lc-reviews lc-shell">
+          <h2 class="lc-heading">STREUSELKUCHEN <em>EN LA COCINA</em></h2>
+          <p>Mira las conversaciones reales compartidas con la Chef Luana.</p>
+          <div class="lc-review-grid" id="review-grid"></div>
+          <a class="lc-cta" href="#ofertas">QUIERO CONOCER LAS RECETAS</a>
+        </section>
+
+        <!-- FAQ -->
+        <section class="lc-faq lc-shell">
+          <h2 class="lc-heading">PREGUNTAS FRECUENTES (FAQ)</h2>
+          <div class="lc-faq-list" id="faq-list"></div>
+          <p class="lc-final">Tu próximo café puede tener el sabor de la tradición alemana.</p>
+          <p>Elige la colección que va contigo.</p>
+          <a class="lc-cta" href="#ofertas">VER LAS OFERTAS</a>
+        </section>
+
+        <footer class="lc-footer">
+          <strong>90 RECETAS DE STREUSELKUCHEN · CHEF LUANA</strong>
+          <p>Recetas digitales para consultar cuando quieras.</p>
+          <p>© 2026 Chef Luana. Todos los derechos reservados.</p>
+        </footer>
+      </main>
+    </div>
+
+    <script src="../app.js"></script>
+    <script src="local-price.js"></script>
+  </body>
+</html>
