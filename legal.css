@@ -1,0 +1,29 @@
+/* Páginas legais (privacidade, termos, reembolso, contato) */
+.legal-page{background:#fffaf6;padding-bottom:0}
+.legal-top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;background:#2b170f;color:#fbe9dc;font-size:12px;font-weight:800;letter-spacing:.04em}
+.legal-top a{color:#fbe9dc;text-decoration:none;white-space:nowrap}
+.legal-top a:hover{text-decoration:underline}
+.legal-body{padding:26px 20px 34px;color:#3a2a22;font-size:14.5px;line-height:1.65}
+.legal-body h1{margin:0 0 6px;color:#2b170f;font-size:26px;line-height:1.15;font-weight:950}
+.legal-updated{margin:0 0 22px;color:#8a6f60;font-size:12px;font-weight:700}
+.legal-body h2{margin:26px 0 8px;color:#7c3719;font-size:17px;line-height:1.3;font-weight:900}
+.legal-body p,.legal-body ul{margin:0 0 12px}
+.legal-body ul{padding-left:20px}
+.legal-body li{margin-bottom:6px}
+.legal-body a{color:#7c3719;font-weight:700}
+.legal-box{margin:18px 0;padding:14px 16px;border-radius:14px;background:#fbf1ea;border:1px solid #f0dccd}
+.legal-box p:last-child{margin-bottom:0}
+.legal-back{display:block;margin:28px auto 0;padding:14px 18px;border-radius:999px;background:linear-gradient(90deg,#5a2510,#b96a3c);color:#fff!important;text-align:center;text-decoration:none;font-weight:900;font-size:14px}
+
+/* Rodapé com links legais (usado também na página de vendas) */
+.lc-legal-links{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:14px 0 12px}
+.lc-legal-links a{display:inline-block;padding:7px 12px;border:1px solid #6b4330;border-radius:999px;color:#fbe9dc;text-decoration:none;font-size:11.5px;font-weight:700}
+.lc-legal-links a:hover,.lc-legal-links a:focus-visible{background:#4a2617;border-color:#b96a3c}
+.lc-legal-company{color:#e7cfc0;line-height:1.6}
+.lc-legal-company a{color:#ffd6b8}
+.lc-legal-disclaimer{max-width:360px;color:#b99b8a;font-size:10.5px;line-height:1.55}
+
+/* Aviso de cookies */
+.cookie-bar{font-family:ui-sans-serif,system-ui,sans-serif;position:fixed;left:50%;bottom:12px;z-index:90;transform:translateX(-50%);width:min(406px,calc(100% - 24px));display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:14px;background:#2b170f;color:#fbe9dc;font-size:12px;line-height:1.45;box-shadow:0 10px 30px #0000004d}
+.cookie-bar a{color:#ffd6b8;font-weight:700}
+.cookie-bar button{flex:none;padding:9px 14px;border:0;border-radius:999px;background:#b96a3c;color:#fff;font-weight:900;font-size:12px;cursor:pointer}

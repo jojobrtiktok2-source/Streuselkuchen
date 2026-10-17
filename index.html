@@ -16,6 +16,7 @@
     <!-- Pixel do Google: entra aqui -->
 
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="legal.css" />
     <style>[hidden]{display:none!important}</style>
   </head>
   <body>
@@ -187,10 +188,34 @@
         <footer class="lc-footer">
           <strong>90 RECEITAS DE STREUSELKUCHEN · CHEF LUANA</strong>
           <p>Receitas digitais para consultar quando quiser.</p>
+          <nav class="lc-legal-links" aria-label="Informações legais">
+            <a href="politica-de-privacidade/">Política de Privacidade</a>
+            <a href="termos-de-uso/">Termos de Uso</a>
+            <a href="politica-de-reembolso/">Política de Reembolso</a>
+            <a href="contato/">Contato</a>
+          </nav>
+          <p class="lc-legal-company">[RAZAO_SOCIAL] · CNPJ/CPF [CNPJ]<br />Atendimento: <a href="mailto:[EMAIL]">[EMAIL]</a></p>
+          <p class="lc-legal-disclaimer">Produto 100% digital: nenhum item físico será enviado. Os resultados das receitas podem variar conforme ingredientes, equipamentos e modo de preparo. Pagamento processado com segurança pela Cakto.</p>
           <p>© 2026 Chef Luana. Todos os direitos reservados.</p>
         </footer>
       </main>
     </div>
+
+    <div class="cookie-bar" id="cookie-bar" hidden>
+      <span>Usamos cookies para melhorar sua experiência e medir nossos anúncios. Saiba mais na <a href="politica-de-privacidade/">Política de Privacidade</a>.</span>
+      <button type="button" id="cookie-ok">Entendi</button>
+    </div>
+    <script>
+      (function () {
+        var bar = document.getElementById("cookie-bar");
+        try { if (localStorage.getItem("cookie-ok")) return; } catch (e) {}
+        bar.hidden = false;
+        document.getElementById("cookie-ok").addEventListener("click", function () {
+          bar.hidden = true;
+          try { localStorage.setItem("cookie-ok", "1"); } catch (e) {}
+        });
+      })();
+    </script>
 
     <script src="app.js"></script>
   </body>
