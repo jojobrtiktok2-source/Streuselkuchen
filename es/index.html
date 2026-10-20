@@ -15,9 +15,19 @@
     <link rel="preload" as="image" href="/es/assets/banner-desktop.webp" type="image/webp" fetchpriority="high" />
     <title>90 Recetas de Streuselkuchen | Chef Luana</title>
 
-    <!-- UTMify (mismo píxel de la página en portugués) -->
-    <script>window.pixelId = "6ac17d59901897dad31db5f2";</script>
-    <script src="https://cdn.utmify.com.br/scripts/pixel/pixel.js" async defer></script>
+    <!-- Meta Pixel: página en español -->
+    <script>
+      !function(f,b,e,v,n,t,s){
+        if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;
+        s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s);
+      }(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1008434774897950');
+      fbq('trackSingle', '1008434774897950', 'PageView');
+    </script>
+    <!-- Parámetros UTM -->
     <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids async defer></script>
 
     <link rel="stylesheet" href="../styles.css" />
@@ -29,6 +39,7 @@
     </style>
   </head>
   <body data-assets="/es/assets/">
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1008434774897950&amp;ev=PageView&amp;noscript=1" alt="" /></noscript>
     <div id="root">
       <main class="lc-page bolos-page streusel-page">
         <div class="lc-promo">ESTA OFERTA ESPECIAL ESTÁ DISPONIBLE HOY<span id="promo-date"></span></div>
